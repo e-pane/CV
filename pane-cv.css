@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+aside {
+    flex: 1 1 33%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      #cfd8eb 0%,     
+      #5a73a3 20%,    
+      #395886 55%,    
+      #395886 75%,    
+      #2d4671 100%    
+    );
+    color: #f9f6ef;    
+    display: flex;
+    flex-direction: column;
+}
+
+.img-wrapper {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-wrapper img {
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+.contact-items {
+    list-style: none;      
+    padding-left: 50px;
+}
+
+.contact-items li {
+    position: relative;
+    color: white;
+    padding-left: 2em;    
+    font-size: 1.2rem;
+}
+
+.contact-items li.phone::before {
+    content: "";        
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.4em;
+    height: 1.4em;  
+    transform: rotate(90deg);
+    background: url('data:image/svg+xml;utf8,<svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 19a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm5-4H7V4h10v13z"/></svg>') no-repeat center/contain;
+}
+
+.contact-items li.email::before {
+    content: "";        /* Unicode envelope ✉ */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.2em;
+    height: 1.2em; 
+    background: url('data:image/svg+xml;utf8,<svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.99l8 6 8-6V18H4z"/></svg>') no-repeat center/contain;
+}
+
+.summary {
+    padding: 15px;
+}
+
+.summary p {
+    font-size: 1 rem;
+    line-height: 1rem;
+}
+
+.contact-info::after,
+.summary::after {
+    content: "";
+    display: block;
+    margin: 20px auto;          /* vertical spacing and centered horizontally */
+    width: 85%;                 /* 75% width of aside */
+    height: 3px;                /* thickness of the line */
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0), /* fade start */
+        rgba(255, 255, 255, 1), /* solid center */
+        rgba(255, 255, 255, 0)  /* fade end */
+    );
+}
+
+.skills {
+    padding-right: 10px;
+}
+.skills ul {
+    list-style: none;         /* remove default bullets */
+    padding-left: 1.5em;      /* space for custom bullets */
+}
+
+.skills ul li {
+    position: relative;
+    margin-bottom: 0.8em;     /* gap between items */
+    padding-left: 1.2em;      /* space for arrow */
+    color: #f9f6ef;           /* text color */
+    font-size: 1rem;
+}
+
+/* Custom arrow bullet */
+.skills ul li::before {
+    content: "➤";              /* arrow character */
+    position: absolute;
+    left: 0;
+    color: #ffffffcc;          /* slightly transparent white for subtle contrast */
+    font-size: 1rem;
+}
+
+/* Links color slightly different than text */
+.skills ul li a {
+    color: #e0e2ea;           /* off-white / light steel-ish */
+    text-decoration: underline; /* optional: makes them clearly clickable */
+    transition: color 0.3s;
+}
+
+.skills ul li a:hover {
+    color: #ffffff;            /* brightens on hover */
+}
+
+main {
+    flex: 1 1 66%;
+    height: 100%;
+}
