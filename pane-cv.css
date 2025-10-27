@@ -20,6 +20,7 @@ aside {
     color: #f9f6ef;    
     display: flex;
     flex-direction: column;
+    padding-right: 10px;
 }
 
 .img-wrapper {
@@ -228,7 +229,7 @@ main a:visited {
 }
 
 main a:hover {
-    color: #66ccff; /* lighter blue on hover */
+    color: #5092C3 /* lighter blue on hover */
 }
 
 main a:active {
