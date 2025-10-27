@@ -158,7 +158,7 @@ main > .other::after {
 }
 
 .name > h1 {
-    background: linear-gradient(135deg, #6b84b5, #395886, #2d4671);
+    background: linear-gradient(135deg, #7a8ccf, #6b84b5, #395886, #2d4671);
     color: #f9f6ef;
     font-size: 4rem;
     letter-spacing: 2px;
